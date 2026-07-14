@@ -5,7 +5,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900",
 
     description:
-      "An intelligent AI assistant capable of automating tasks, understanding natural language, and helping users become more productive. (still under production)",
+      "An intelligent AI assistant capable of automating tasks, understanding natural language, and helping users become more productive. (still under development)",
 
     tech: ["Machine/Deep learning", "React", "Python/numpy", "TypeScript"],
 
