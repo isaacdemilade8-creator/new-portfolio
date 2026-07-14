@@ -1,27 +1,27 @@
 const projects = [
 
 {
-title:"AI Personal Assistant",
+title:"General AI chatbot",
 
 image:"https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900",
 
-description:"An intelligent AI assistant capable of automating tasks, understanding natural language, and helping users become more productive.",
+description:"An intelligent AI assistant capable of automating tasks, understanding natural language, and helping users become more productive. (still under production)",
 
 tech:[
-"AI",
-"React Native",
-"Node.js",
+"Machine/Deep learning",
+"React",
+"Python/numpy",
 "TypeScript"
 ],
 
-github:"#",
+github:"https://github.com/isaacdemilade8-creator/veeracle-ai",
 
-demo:"#"
+demo:"https://github.com/isaacdemilade8-creator/veeracle-ai"
 
 },
 
 {
-title:"Digital Cooperative Platform",
+title:"3D animated futuristic Ijebu-ode community",
 
 image:"../images/ijebu-ode.png",
 
@@ -40,7 +40,7 @@ demo:"https://ijebu-ode-web.vercel.app/"
 },
 
 {
-title:"Vee-Watch",
+title:"Meenah's haven",
 
 image:"../images/restaurant.png",
 
@@ -97,20 +97,20 @@ demo:"https://vidatech-library.netlify.app/"
 },
 
 {
-title:"Healthcare Platform",
+title:"Vee-care",
 
 image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900",
 
-description:"Healthcare solution connecting patients with healthcare providers.",
+description:"Healthcare solution connecting patients with healthcare providers. (still under development)",
 
 tech:[
 "Laravel",
 "MySQL"
 ],
 
-github:"#",
+github:"https://github.com/isaacdemilade8-creator/vee-care",
 
-demo:"#"
+demo:"https://github.com/isaacdemilade8-creator/vee-care"
 
 }
 
