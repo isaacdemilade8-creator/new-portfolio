@@ -73,7 +73,7 @@ tech:[
 
 github:"https://github.com/isaacdemilade8-creator/laravel-cbt-app",
 
-demo:"#"
+demo:"https://cbt-app.free.laravel.cloud/"
 
 },
 
@@ -92,7 +92,7 @@ tech:[
 
 github:"https://github.com/isaacdemilade8-creator/library_management",
 
-demo:"#"
+demo:"https://vidatech-library.netlify.app/"
 
 },
 
