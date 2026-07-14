@@ -1,118 +1,91 @@
 const projects = [
+  {
+    title: "General AI chatbot",
 
-{
-title:"General AI chatbot",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900",
 
-image:"https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900",
+    description:
+      "An intelligent AI assistant capable of automating tasks, understanding natural language, and helping users become more productive. (still under production)",
 
-description:"An intelligent AI assistant capable of automating tasks, understanding natural language, and helping users become more productive. (still under production)",
+    tech: ["Machine/Deep learning", "React", "Python/numpy", "TypeScript"],
 
-tech:[
-"Machine/Deep learning",
-"React",
-"Python/numpy",
-"TypeScript"
-],
+    github: "https://github.com/isaacdemilade8-creator/veeracle-ai",
 
-github:"https://github.com/isaacdemilade8-creator/veeracle-ai",
+    demo: "https://github.com/isaacdemilade8-creator/veeracle-ai",
+  },
 
-demo:"https://github.com/isaacdemilade8-creator/veeracle-ai"
+  {
+    title: "3D animated futuristic Ijebu-ode community",
 
-},
+    image: "../images/ijebu-ode.png",
 
-{
-title:"3D animated futuristic Ijebu-ode community",
+    description:
+      "A visualisation of what the community of ijebu-ode might look like over the years",
 
-image:"../images/ijebu-ode.png",
+    tech: ["next.js", "tailwindcss", "three.js"],
 
-description:"A visualisation of what the community of ijebu-ode might look like over the years",
+    github: "https://github.com/isaacdemilade8-creator/ijebu-ode-web",
 
-tech:[
-"next.js",
-"tailwindcss",
-"three.js"
-],
+    demo: "https://ijebu-ode-web.vercel.app/",
+  },
 
-github:"https://github.com/isaacdemilade8-creator/ijebu-ode-web",
+  {
+    title: "Meenah's haven",
 
-demo:"https://ijebu-ode-web.vercel.app/"
+    image: "../images/restaurant.png",
 
-},
+    description:
+      "A captivating website, built for a restaurant in Ibadan, Nigeria",
 
-{
-title:"Meenah's haven",
+    tech: ["vue", "CSS", "JavaScript"],
 
-image:"../images/restaurant.png",
+    github: "https://github.com/isaacdemilade8-creator/Restaurant",
 
-description:"A captivating website, built for a restaurant in Ibadan, Nigeria",
+    demo: "https://meenah-haven.vercel.app/",
+  },
 
-tech:[
-"vue",
-"CSS",
-"JavaScript"
-],
+  {
+    title: "CBT Examination System",
 
-github:"https://github.com/isaacdemilade8-creator/Restaurant",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900",
 
-demo:"https://meenah-haven.vercel.app/"
+    description:
+      "Online examination platform with admin, teachers and students dashboard.",
 
-},
+    tech: ["Laravel", "MySQL", "JavaScript"],
 
-{
-title:"CBT Examination System",
+    github: "https://github.com/isaacdemilade8-creator/laravel-cbt-app",
 
-image:"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900",
+    demo: "https://cbt-app.free.laravel.cloud/",
+  },
 
-description:"Online examination platform with admin, teachers and students dashboard.",
+  {
+    title: "Library Management System",
 
-tech:[
-"Laravel",
-"MySQL",
-"JavaScript"
-],
+    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=900",
 
-github:"https://github.com/isaacdemilade8-creator/laravel-cbt-app",
+    description:
+      "Modern library software for managing books, members and borrowing history.",
 
-demo:"https://cbt-app.free.laravel.cloud/"
+    tech: ["JavaScript", "HTML", "CSS"],
 
-},
+    github: "https://github.com/isaacdemilade8-creator/library_management",
 
-{
-title:"Library Management System",
+    demo: "https://vidatech-library.netlify.app/",
+  },
 
-image:"https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=900",
+  {
+    title: "Vee-care",
 
-description:"Modern library software for managing books, members and borrowing history.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900",
 
-tech:[
-"JavaScript",
-"HTML",
-"CSS"
-],
+    description:
+      "Healthcare solution connecting patients with healthcare providers. (still under development)",
 
-github:"https://github.com/isaacdemilade8-creator/library_management",
+    tech: ["Laravel", "MySQL", "React"],
 
-demo:"https://vidatech-library.netlify.app/"
+    github: "https://github.com/isaacdemilade8-creator/vee-care",
 
-},
-
-{
-title:"Vee-care",
-
-image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900",
-
-description:"Healthcare solution connecting patients with healthcare providers. (still under development)",
-
-tech:[
-"Laravel",
-"MySQL",
-"React"
-],
-
-github:"https://github.com/isaacdemilade8-creator/vee-care",
-
-demo:"https://github.com/isaacdemilade8-creator/vee-care"
-
-}
-
+    demo: "https://github.com/isaacdemilade8-creator/vee-care",
+  },
 ];

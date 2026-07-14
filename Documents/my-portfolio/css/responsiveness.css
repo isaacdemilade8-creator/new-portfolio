@@ -268,7 +268,6 @@ text-align:center;
         gap: 50px;
         text-align: center;
         /* padding-left: 0; */
-        border: 2px solid red;
     }
 
     .hero-text {
@@ -300,6 +299,9 @@ text-align:center;
 
     .about-image img {
         height: auto;
+        /* width: 100%; */
+        /* border: 2px solid red; */
+        justify-self: center;
         max-height: 480px;
     }
 

@@ -5,7 +5,7 @@ LOADER
 const loader = document.querySelector(".loader");
 
 function hideLoader() {
-    if (loader) loader.classList.add("hide");
+  if (loader) loader.classList.add("hide");
 }
 
 window.addEventListener("load", hideLoader);
@@ -16,10 +16,10 @@ TYPING EFFECT
 =========================*/
 
 const words = [
-    "AI Engineer",
-    "Full Stack Developer",
-    "Frontend Engineer",
-    "Problem Solver"
+  "AI Engineer",
+  "Full Stack Developer",
+  "Frontend Engineer",
+  "Problem Solver",
 ];
 
 let wordIndex = 0;
@@ -29,29 +29,29 @@ let deleting = false;
 const typing = document.getElementById("typing");
 
 function typeEffect() {
-    if (!typing) return;
+  if (!typing) return;
 
-    const currentWord = words[wordIndex];
+  const currentWord = words[wordIndex];
 
-    if (!deleting) {
-        typing.textContent = currentWord.substring(0, letterIndex++);
+  if (!deleting) {
+    typing.textContent = currentWord.substring(0, letterIndex++);
 
-        if (letterIndex > currentWord.length) {
-            deleting = true;
-            setTimeout(typeEffect, 2000);
-            return;
-        }
-    } else {
-        typing.textContent = currentWord.substring(0, letterIndex--);
-
-        if (letterIndex < 0) {
-            deleting = false;
-            wordIndex++;
-            if (wordIndex >= words.length) wordIndex = 0;
-        }
+    if (letterIndex > currentWord.length) {
+      deleting = true;
+      setTimeout(typeEffect, 2000);
+      return;
     }
+  } else {
+    typing.textContent = currentWord.substring(0, letterIndex--);
 
-    setTimeout(typeEffect, deleting ? 50 : 100);
+    if (letterIndex < 0) {
+      deleting = false;
+      wordIndex++;
+      if (wordIndex >= words.length) wordIndex = 0;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 50 : 100);
 }
 
 typeEffect();
@@ -63,13 +63,13 @@ HEADER
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-        header.style.background = "rgba(5,8,22,.95)";
-        header.style.boxShadow = "0 4px 20px rgba(0,0,0,.2)";
-    } else {
-        header.style.background = "rgba(5,8,22,.75)";
-        header.style.boxShadow = "none";
-    }
+  if (window.scrollY > 40) {
+    header.style.background = "rgba(5,8,22,.95)";
+    header.style.boxShadow = "0 4px 20px rgba(0,0,0,.2)";
+  } else {
+    header.style.background = "rgba(5,8,22,.75)";
+    header.style.boxShadow = "none";
+  }
 });
 
 /*=========================
@@ -77,23 +77,23 @@ SCROLL REVEAL
 =========================*/
 
 const revealItems = document.querySelectorAll(
-    ".section-heading, .about-wrapper, .skills-grid, .services-grid, #projectsContainer, .contact"
+  ".section-heading, .about-wrapper, .skills-grid, .services-grid, #projectsContainer, .contact",
 );
 
 const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    },
-    { threshold: 0.1 }
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.1 },
 );
 
 revealItems.forEach((item) => {
-    item.classList.add("hidden");
-    observer.observe(item);
+  item.classList.add("hidden");
+  observer.observe(item);
 });
 
 /*=========================
@@ -104,21 +104,21 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
 window.addEventListener("scroll", () => {
-    let current = "";
+  let current = "";
 
-    sections.forEach((section) => {
-        const top = section.offsetTop - 150;
-        if (pageYOffset >= top) {
-            current = section.getAttribute("id");
-        }
-    });
+  sections.forEach((section) => {
+    const top = section.offsetTop - 150;
+    if (pageYOffset >= top) {
+      current = section.getAttribute("id");
+    }
+  });
 
-    navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
 
 /*=========================
@@ -128,10 +128,10 @@ PROJECTS
 const projectsContainer = document.getElementById("projectsContainer");
 
 if (projectsContainer) {
-    projectsContainer.innerHTML = "";
+  projectsContainer.innerHTML = "";
 
-    projects.forEach((project) => {
-        projectsContainer.innerHTML += `
+  projects.forEach((project) => {
+    projectsContainer.innerHTML += `
         <div class="project-card">
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title}">
@@ -153,7 +153,7 @@ if (projectsContainer) {
             </div>
         </div>
         `;
-    });
+  });
 }
 
 /*=========================
@@ -163,37 +163,35 @@ COUNTER
 const counters = document.querySelectorAll(".counter");
 
 const startCounter = () => {
-    counters.forEach((counter) => {
-        const target = +counter.dataset.target;
-        let current = 0;
-        const increment = target / 60;
+  counters.forEach((counter) => {
+    const target = +counter.dataset.target;
+    let current = 0;
+    const increment = target / 60;
 
-        const update = () => {
-            if (current < target) {
-                current += increment;
-                counter.textContent = Math.ceil(current);
-                requestAnimationFrame(update);
-            } else {
-                counter.textContent = target + "+";
-            }
-        };
+    const update = () => {
+      if (current < target) {
+        current += increment;
+        counter.textContent = Math.ceil(current);
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target + "+";
+      }
+    };
 
-        update();
-    });
+    update();
+  });
 };
 
 const about = document.querySelector("#about");
 
-const counterObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                startCounter();
-                counterObserver.disconnect();
-            }
-        });
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      startCounter();
+      counterObserver.disconnect();
     }
-);
+  });
+});
 
 counterObserver.observe(about);
 
@@ -204,9 +202,10 @@ SCROLL PROGRESS
 const progressBar = document.getElementById("progress-bar");
 
 window.addEventListener("scroll", () => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (window.pageYOffset / totalHeight) * 100;
-    progressBar.style.width = progress + "%";
+  const totalHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (window.pageYOffset / totalHeight) * 100;
+  progressBar.style.width = progress + "%";
 });
 
 /*====================================
@@ -216,39 +215,33 @@ BACK TO TOP
 const topBtn = document.getElementById("scrollTop");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-        topBtn.classList.add("show");
-    } else {
-        topBtn.classList.remove("show");
-    }
+  if (window.scrollY > 500) {
+    topBtn.classList.add("show");
+  } else {
+    topBtn.classList.remove("show");
+  }
 });
 
 topBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 /*=========================
 MOBILE MENU
 =========================*/
 
-const menuBtn=document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
 
-const nav=document.getElementById("nav");
+const nav = document.getElementById("nav");
 
-menuBtn.addEventListener("click",()=>{
-
-nav.classList.toggle("show");
-
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("show");
 });
 
-document.querySelectorAll("#nav a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-nav.classList.remove("show");
-
-});
-
+document.querySelectorAll("#nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show");
+  });
 });
 
 /*====================================
@@ -256,53 +249,44 @@ EMAILJS CONTACT FORM
 ====================================*/
 
 emailjs.init({
-    publicKey: "NSIP2Sb5SmF0jaIoB",
+  publicKey: "NSIP2Sb5SmF0jaIoB",
 });
 
 const contactForm = document.getElementById("contactForm");
 
 contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    e.preventDefault();
+  const button = contactForm.querySelector("button");
 
-    const button = contactForm.querySelector("button");
+  const originalText = button.innerHTML;
 
-    const originalText = button.innerHTML;
+  button.disabled = true;
+  button.innerHTML = "Sending...";
 
-    button.disabled = true;
-    button.innerHTML = "Sending...";
-
-    emailjs.sendForm(
-        "vidatech_id",
-        "template_rwzidn8",
-        this
-    )
+  emailjs
+    .sendForm("vidatech_id", "template_rwzidn8", this)
     .then(() => {
+      button.innerHTML = "✓ Message Sent";
 
-        button.innerHTML = "✓ Message Sent";
+      alert("Thank you! Your message has been sent successfully.");
 
-        alert("Thank you! Your message has been sent successfully.");
+      contactForm.reset();
 
-        contactForm.reset();
-
-        setTimeout(() => {
-            button.disabled = false;
-            button.innerHTML = originalText;
-        }, 2500);
-
+      setTimeout(() => {
+        button.disabled = false;
+        button.innerHTML = originalText;
+      }, 2500);
     })
     .catch((error) => {
+      console.error("EmailJS Error:", error);
 
-    console.error("EmailJS Error:", error);
-
-    alert(`
+      alert(`
 Status: ${error.status}
 Text: ${error.text}
     `);
 
-    button.disabled = false;
-    button.innerHTML = originalText;
-
-});
-
+      button.disabled = false;
+      button.innerHTML = originalText;
+    });
 });

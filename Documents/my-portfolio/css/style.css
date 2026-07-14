@@ -409,12 +409,6 @@ object-fit:cover;
 
 }
 
-@media (max-width: 400px) {
-    .greeting {
-        margin-top: 40px;
-    }
-}
-
 /*==============================
 PROFILE IMAGE
 ==============================*/
