@@ -71,7 +71,7 @@ tech:[
 "JavaScript"
 ],
 
-github:"#",
+github:"https://github.com/isaacdemilade8-creator/laravel-cbt-app",
 
 demo:"#"
 
@@ -90,7 +90,7 @@ tech:[
 "CSS"
 ],
 
-github:"#",
+github:"https://github.com/isaacdemilade8-creator/library_management",
 
 demo:"#"
 
