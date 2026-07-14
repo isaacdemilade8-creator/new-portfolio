@@ -387,15 +387,41 @@
             <p>📍 Ogun State, Nigeria</p>
           </div>
 
-          <form>
-            <input placeholder="Name" />
+          <form id="contactForm">
 
-            <input placeholder="Email" />
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+    >
 
-            <textarea placeholder="Message"> </textarea>
+    <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+    >
 
-            <button>Send Message</button>
-          </form>
+    <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required
+    >
+
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Your Message"
+        required
+    ></textarea>
+
+    <button type="submit">
+        Send Message
+    </button>
+
+</form>
         </div>
       </div>
     </section>
@@ -482,6 +508,9 @@ Built with HTML, CSS & JavaScript.
 
     <script src="js/data.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <script src="js/main.js"></script>
+
   </body>
 </html>

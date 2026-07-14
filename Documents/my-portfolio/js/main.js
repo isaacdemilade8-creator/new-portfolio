@@ -250,3 +250,59 @@ nav.classList.remove("show");
 });
 
 });
+
+/*====================================
+EMAILJS CONTACT FORM
+====================================*/
+
+emailjs.init({
+    publicKey: "NSIP2Sb5SmF0jaIoB",
+});
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const button = contactForm.querySelector("button");
+
+    const originalText = button.innerHTML;
+
+    button.disabled = true;
+    button.innerHTML = "Sending...";
+
+    emailjs.sendForm(
+        "vidatech_id",
+        "template_rwzidn8",
+        this
+    )
+    .then(() => {
+
+        button.innerHTML = "✓ Message Sent";
+
+        alert("Thank you! Your message has been sent successfully.");
+
+        contactForm.reset();
+
+        setTimeout(() => {
+            button.disabled = false;
+            button.innerHTML = originalText;
+        }, 2500);
+
+    })
+    .catch((error) => {
+
+    console.error("EmailJS Error:", error);
+
+    alert(`
+Status: ${error.status}
+Text: ${error.text}
+    `);
+
+    button.disabled = false;
+    button.innerHTML = originalText;
+
+});
+
+});
