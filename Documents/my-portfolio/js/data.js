@@ -105,7 +105,8 @@ description:"Healthcare solution connecting patients with healthcare providers. 
 
 tech:[
 "Laravel",
-"MySQL"
+"MySQL",
+"React"
 ],
 
 github:"https://github.com/isaacdemilade8-creator/vee-care",
