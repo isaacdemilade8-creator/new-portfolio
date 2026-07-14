@@ -23,38 +23,38 @@ demo:"#"
 {
 title:"Digital Cooperative Platform",
 
-image:"https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=900",
+image:"../images/ijebu-ode.png",
 
-description:"A digital thrift and cooperative management platform that automates contributions, bookkeeping, loans and payouts.",
+description:"A visualisation of what the community of ijebu-ode might look like over the years",
 
 tech:[
-"Laravel",
-"React",
-"MySQL"
+"next.js",
+"tailwindcss",
+"three.js"
 ],
 
-github:"#",
+github:"https://github.com/isaacdemilade8-creator/ijebu-ode-web",
 
-demo:"#"
+demo:"https://ijebu-ode-web.vercel.app/"
 
 },
 
 {
 title:"Vee-Watch",
 
-image:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=900",
+image:"../images/restaurant.png",
 
-description:"Movie discovery platform with trending movies, search, favourites and watchlists.",
+description:"A captivating website, built for a restaurant in Ibadan, Nigeria",
 
 tech:[
-"HTML",
+"vue",
 "CSS",
 "JavaScript"
 ],
 
-github:"#",
+github:"https://github.com/isaacdemilade8-creator/Restaurant",
 
-demo:"#"
+demo:"https://meenah-haven.vercel.app/"
 
 },
 
